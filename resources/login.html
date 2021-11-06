@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/LoginForm-styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <section class="container">
+        <div class="containerForm">
+            <div class="containerImg"></div>
+            <div class="containerInfo">
+                <h1 class="containerInfo__Title">Iniciar Sesión</h1>
+                <form class="form login" id="form__login">
+                    <label class="form__label" for="mail">Correo electronico</label>
+                    <i class="fas fa-at">
+                        <input class="form__input" type="email" name="Name_mail" id="mail" placeholder="Correo electronico" title="Ingresa un correo valido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    </i>
+                    <label class="form__label" for="password">Contraseña</label>
+                    <i class="fas fa-lock">
+                        <input class="form__input" type="password" name="Name_password" id="password" placeholder="Contraseña" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Minimo 8 caracteres y una letra" minlength="8" required>
+                    </i>
+                    <section class="container__buttons">
+                        <button class="form__btn" type="submit">Ingresar</button>
+                        <button class="form__btn" type="button" id="btn__register">Registrarme</button>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>

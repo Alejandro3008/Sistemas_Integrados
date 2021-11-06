@@ -1,0 +1,11 @@
+:root{
+    --black: #262626;
+    --gray: #4E4C4C;
+    --purple: #A93AFF;
+    --white: #E0E0E0;
+    --valid: #3dca43;
+    --invalid: #da3d3d;
+    --main-font: Ubuntu;
+    --font-size: 16px;
+    --max-widht: 1200px;
+}
