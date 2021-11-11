@@ -1,0 +1,36 @@
+/* * Contenedor principal */
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--black);
+    color: var(--black);
+}
+
+/* * Estilos para el titulo */
+.indexTitle{
+    position: absolute;
+    width: 200px;
+    display: inline;
+    font-size: 2rem;
+    left: calc(50vw - 100px);
+    text-align: center;
+}
+.containerJob{
+    width: 50vw;
+    height: 100vh;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+}
+
+/* * Efectos para cuando se pase sobre los contenedores */
+.containerJob:hover{
+    background-color: var(--purple);
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all .2s ease;
+}

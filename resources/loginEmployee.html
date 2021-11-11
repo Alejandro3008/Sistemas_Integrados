@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/LoginForm-styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+    <title>Inicio sesion emplado</title>
+</head>
+<body>
+    <h1 class="companyTitle" id="workIT">Work IT</h1>
+    <section class="body">
+        <div class="container">
+            <div class="containerImg"></div>
+            <div class="containerInfo">
+                <h2 class="containerInfo__Title">Iniciar sesión empleado</h2>
+                <form class="containerForm" id="formLogin__Employee">
+                    <label class="containerForm__label" for="mailEmployee">Correo electronico</label>
+                    <i class="fas fa-at">
+                        <input class="containerForm__input" type="email" name="email" id="mailEmployee" placeholder="Correo electronico" title="Ingresa un correo valido" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                    </i>
+                    <label class="containerForm__label" for="passwordEmployee">Contraseña</label>
+                    <i class="fas fa-lock">
+                        <input class="containerForm__input" type="password" name="password" id="passwordEmployee" placeholder="Contraseña" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Minimo 8 caracteres y una letra" minlength="8" required>
+                    </i>
+                    <section class="containerButtons">
+                        <button class="containerButtons__btn" type="submit">Ingresar</button>
+                        <button class="containerButtons__btn" type="button" id="btnRegister__employee">Registrarme</button>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.8/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

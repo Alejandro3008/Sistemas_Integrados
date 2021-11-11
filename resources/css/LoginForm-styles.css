@@ -1,27 +1,6 @@
-
-html{
-    box-sizing: border-box;
-    font-family: var(--main-font);
-    font-size: var(--font-size);
-    scroll-behavior: smooth;
-}
-
-*,*::after,*::before{
-    box-sizing: inherit;
-}
-
-body{
-    margin: 0;
-    overflow-x: hidden;
-}
-
-img{
-    width: 100%;
-    height: auto;
-}
-
-/** ------------------ Contenedor del formulario ------------------ */
-.container{
+html{color: var(--white);}
+/** ------------------ Contenedor principal ------------------ */
+.body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,10 +8,23 @@ img{
     height: 100vh;
     background-color: var(--black);
 }
-.containerForm{
+
+/** ------------------ Titulo ------------------ */
+.companyTitle{
+    position: absolute;
+    width: 200px;
+    display: inline;
+    font-size: 2rem;
+    left: calc(50vw - 100px);
+    text-align: center;
+    cursor: pointer;
+}
+
+/** ------------------ Contenedor del formulario e imagen ------------------ */
+.container{
     width: 70vw;
     height: 80vh;
-    display: flex;
+    display: inherit;
     background-color: var(--gray);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.88);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.88);
@@ -40,7 +32,6 @@ img{
 }
 
 /** ------------------ Contenedor de la imagen ------------------ */
-
 .containerImg{
     width: 45%;
     height: 100%;
@@ -51,74 +42,78 @@ img{
     filter: blur(2px);
 }
 
-/** ------------------ Contenedor del formulario ------------------ */
+/** ------------------ Contenedor del formulario y titulo: inicio de sesion/ registro ------------------ */
 .containerInfo{
     width: 65%;
     height: 100%;
-    display: flex;
+    display: inherit;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     color: var(--white);
-    /* background-color: violet; */
 }
+
+/** ------------------ Titulo del formulario ------------------ */
 .containerInfo__Title{
     width: 90%;
-    padding: .5rem 0;
+    padding: 0.3rem 0;
     border-bottom: solid 1px var(--white);
     text-align: center;
 }
 
-.form{
+/** ------------------ Contenedor del formulario ------------------ */
+.containerForm{
     width: 90%;
     padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-}
-.login{
-    margin: 3rem 0;
+    display: inherit;
+    flex-direction: inherit;
 }
 
-.form__label{
-    margin: .5rem 0;
-}
-.form__input{
+/** ------------------ Distancia de los label respecto a sus input ------------------ */
+.containerForm__label{margin: .3rem 0;}
+
+/** ------------------ Estilos de los input ------------------ */
+.containerForm__input{
     width: 90%;
     height: 2rem;
     margin: 0 .5rem;
     border: none;
-    color: var(--white);
+    color: inherit;
     padding: .5rem;
     background-color: #383838;
 }
-.container__buttons{
+
+/** ------------------ Efecto de los input ------------------ */
+.containerForm__input:focus, .form__input:active{ outline: none;}
+.containerForm__input[required]:valid{border: thin solid var(--valid);}
+.containerForm__input[required]:invalid{border: thin solid var(--invalid);}
+
+/** ------------------ Contenedor para los botones ------------------ */
+.containerButtons{
     width: 95%;
-    display: flex;
+    display: inherit;
     justify-content: space-between;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
-.form__btn{
+
+/** ------------------ Estilo de los botones ------------------ */
+.containerButtons__btn{
     width: 40%;
-    height: 3rem;
+    height: 2rem;
     border-radius: 3rem;
     color: var(--purple);
     cursor: pointer;
     background-color: transparent;
     border: solid 1px var(--purple);
 }
-.form__btn:hover{
+
+/** ------------------ Efecto de los botones ------------------ */
+.containerButtons__btn:hover{
     color: var(--white);
     background-color: var(--purple);
 }
-.form__input:focus, .form__input:active{
-    outline: none;
-}
-.form__input[required]:valid{
-    border: thin solid var(--valid);
-}
-.form__input[required]:invalid{
-    border: thin solid var(--invalid);
-}
+
+/** ------------------ Efectos en para mensajes de error ------------------ */
 .input__form-error{
     display: block;
     width: 90%;
@@ -130,14 +125,13 @@ img{
     color: var(--white);
     transform: all 1s ease;
 }
-.none{
-    display: none;
-}
+.none{display: none;}
 .input__form-error .is_active{
     display: block;
     animation: show-message 1s 1 normal 0s ease both;
 }
 
+/** ------------------ Animacion para mensajes de error ------------------ */
 @keyframes show-message {
     0%{
         visibility: hidden;
