@@ -28,7 +28,7 @@ CREATE TABLE `projects` (
 
 INSERT INTO `employees` (`employee_id`, `employee_name`, `employee_lastnames`, `employee_phone`, `employee_email`, `employee_password`,  `employee_admin`) VALUES
 (1, 'Ernesto Adan', 'Zurbia', '4423456789', 'neto844@outlook.com', 'zurbianeto844',  1),
-(2, 'Adrian', 'Morales', '4427981346', 'chiniman1@outlook.com', 'pollos1',  1);
+(2, 'Adrian', 'Morales', '4427981346', 'chiniman1@outlook.com', 'pollos1',  1),
 (3, 'Roberto', 'Cruz Lozano', '4426504780', 'tank3-tk3@outlook.com', 'dovakhin1',  1);
 
 INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_mail`, `admin_password`) VALUES
@@ -39,6 +39,9 @@ ALTER TABLE `employees`
 
 ALTER TABLE `admin`
     ADD PRIMARY KEY (`admin_id`);
+
+ALTER TABLE `projects`
+    ADD PRIMARY KEY (`pro_id`);
 
 ALTER TABLE `employees`
     MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
