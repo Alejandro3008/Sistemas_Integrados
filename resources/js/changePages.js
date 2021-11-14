@@ -51,4 +51,16 @@ function home($titleHome){
     })
 }
 
-export{changeScreenEmployee, changeScreenAdmin, selectJob, home}
+//* --------------- Enviar al Home --------------------
+function selectHome($btnAdmin,$btnEmployee){
+    d.addEventListener('click', e=>{
+        if(e.target.matches($btnHomeAdmin) || e.target.matches(`${$btnHomeAdmin} *`)){
+            window.location.href = 'adminHome.html'
+        }
+        if(e.target.matches($btnHomeEmployee) || e.target.matches(`${$btnHomeEmployee} *`)){
+            window.location.href = 'employeeHome.html'
+        }
+    })
+}
+
+export{changeScreenEmployee, changeScreenAdmin, selectJob, home, selectHome}

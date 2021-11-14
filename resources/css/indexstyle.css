@@ -17,6 +17,7 @@
     font-size: 2rem;
     left: calc(50vw - 100px);
     text-align: center;
+    color: #c7c7c7;
 }
 .containerJob{
     width: 50vw;
@@ -25,6 +26,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--gray);
+    font-size: 20;
 }
 
 /* * Efectos para cuando se pase sobre los contenedores */

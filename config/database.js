@@ -3,9 +3,9 @@ const util = require('util')
 const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
-    user: 'alejandro',
-    password: 'Alemania9',
-    database: 'Sistemas_Integraods'
+    user: 'root',
+    password: '',
+    database: 'sistemas_integrados'
 })
 
 pool.query = util.promisify(pool.query)

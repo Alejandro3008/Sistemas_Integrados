@@ -21,6 +21,7 @@ function sendFormInfoLogin(){
                     showConfirmButton: true
                 })
                 console.log(resp);
+                window.location.href = 'adminHome.html'
             })
             .catch(async error =>{
                 await Swal.fire({
@@ -32,6 +33,7 @@ function sendFormInfoLogin(){
                 console.log(error)
             })
         }
+
         if(formName == 'formLogin__Employee'){
             axios({
                 method: 'POST',
@@ -46,6 +48,8 @@ function sendFormInfoLogin(){
                     showConfirmButton: true
                 })
                 console.log(resp);
+                window.location.href = 'employeeHome.html'
+                
             })
             .catch(async error =>{
                 await Swal.fire({
@@ -71,6 +75,7 @@ function sendFormInfoLogin(){
                     showConfirmButton: true
                 })
                 console.log(resp);
+                window.location.href = 'loginAdmin.html'
             })
             .catch(async error =>{
                 await Swal.fire({
@@ -96,6 +101,7 @@ function sendFormInfoLogin(){
                     showConfirmButton: true
                 })
                 console.log(resp);
+                window.location.href = 'loginEmployee.html'
             })
             .catch(async error =>{
                 await Swal.fire({
